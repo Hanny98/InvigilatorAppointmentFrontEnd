@@ -528,8 +528,8 @@ const School = () => {
                             id="customRadio5"
                             name="typeOfSchool"
                             type="radio"
-                            value="Bandar"
-                            checked={school.typeOfSchool === "Bandar"}
+                            value="Public School"
+                            checked={school.typeOfSchool === "Public School"}
                             onChange={handleChange}
                             disabled={isView}
                           />
@@ -537,7 +537,7 @@ const School = () => {
                             className="custom-control-label"
                             htmlFor="customRadio5"
                           >
-                            Bandar
+                            Public School
                           </label>
                         </div>
                         <div className="custom-control custom-radio mb-3">
@@ -546,8 +546,10 @@ const School = () => {
                             id="customRadio6"
                             name="typeOfSchool"
                             type="radio"
-                            value="Luar Bandar"
-                            checked={school.typeOfSchool === "Luar Bandar"}
+                            value="International School"
+                            checked={
+                              school.typeOfSchool === "International School"
+                            }
                             onChange={handleChange}
                             disabled={isView}
                           />
@@ -555,7 +557,7 @@ const School = () => {
                             className="custom-control-label"
                             htmlFor="customRadio6"
                           >
-                            Luar Bandar
+                            International School
                           </label>
                         </div>
                         <div className="custom-control custom-radio mb-3">
@@ -564,8 +566,8 @@ const School = () => {
                             id="customRadio7"
                             name="typeOfSchool"
                             type="radio"
-                            value="Felda"
-                            checked={school.typeOfSchool === "Felda"}
+                            value="Private School"
+                            checked={school.typeOfSchool === "Private School"}
                             onChange={handleChange}
                             disabled={isView}
                           />
@@ -573,7 +575,27 @@ const School = () => {
                             className="custom-control-label"
                             htmlFor="customRadio7"
                           >
-                            Felda
+                            Private School
+                          </label>
+                        </div>
+                        <div className="custom-control custom-radio mb-3">
+                          <input
+                            className="custom-control-input"
+                            id="customRadio8"
+                            name="typeOfSchool"
+                            type="radio"
+                            value="Vernacular School"
+                            checked={
+                              school.typeOfSchool === "Vernacular School"
+                            }
+                            onChange={handleChange}
+                            disabled={isView}
+                          />
+                          <label
+                            className="custom-control-label"
+                            htmlFor="customRadio8"
+                          >
+                            Vernacular School
                           </label>
                         </div>
                       </Col>
