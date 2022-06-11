@@ -172,6 +172,65 @@ const Teacher = () => {
     },
   ];
 
+  const stateOptions = [
+    {
+      value: "",
+      label: "",
+    },
+    {
+      value: "Johor",
+      label: "Johor",
+    },
+    {
+      value: "Kedah",
+      label: "Kedah",
+    },
+    {
+      value: "Kelantan",
+      label: "Kelantan",
+    },
+    {
+      value: "Malacca",
+      label: "Malacca",
+    },
+    {
+      value: "Negeri Sembilan",
+      label: "Negeri Sembilan",
+    },
+    {
+      value: "Pahang",
+      label: "Pahang",
+    },
+    {
+      value: "Penang",
+      label: "Penang",
+    },
+    {
+      value: "Perak",
+      label: "Perak",
+    },
+    {
+      value: "Perlis",
+      label: "Perlis",
+    },
+    {
+      value: "Sabah",
+      label: "Sabah",
+    },
+    {
+      value: "Sarawak",
+      label: "Sarawak",
+    },
+    {
+      value: "Selangor",
+      label: "Selangor",
+    },
+    {
+      value: "Terengganu",
+      label: "Terengganu",
+    },
+  ];
+
   const showViewModal = (_id) => {
     setViewModal(!viewModal);
     setIsView(true);
@@ -314,6 +373,17 @@ const Teacher = () => {
       error({
         title: "Error",
         text: "Invalid City",
+      });
+      return false;
+    }
+    if (
+      currentTeacher.state === "" ||
+      currentTeacher.state === null ||
+      currentTeacher.state === undefined
+    ) {
+      error({
+        title: "Error",
+        text: "Invalid State",
       });
       return false;
     }
@@ -720,7 +790,7 @@ const Teacher = () => {
                 </Col>
               </Row>
               <Row>
-                <Col md="12">
+                <Col lg="6">
                   <FormGroup>
                     <label
                       className="form-control-label"
@@ -739,8 +809,6 @@ const Teacher = () => {
                     />
                   </FormGroup>
                 </Col>
-              </Row>
-              <Row>
                 <Col lg="6">
                   <FormGroup>
                     <label
@@ -760,6 +828,8 @@ const Teacher = () => {
                     />
                   </FormGroup>
                 </Col>
+              </Row>
+              <Row>
                 <Col lg="6">
                   <FormGroup>
                     <label className="form-control-label" htmlFor="input-city">
@@ -774,6 +844,32 @@ const Teacher = () => {
                       onChange={handleUpdateChange}
                       disabled={isView}
                     />
+                  </FormGroup>
+                </Col>
+                <Col lg="6">
+                  <FormGroup>
+                    <label className="form-control-label" htmlFor="input-state">
+                      State
+                    </label>
+                    <Input
+                      className="form-control-alternative"
+                      name="state"
+                      value={currentTeacher.state}
+                      type="select"
+                      onChange={handleUpdateChange}
+                      disabled={isView}
+                    >
+                      {stateOptions.map((state, index) => {
+                        return (
+                          <option
+                            value={state.value}
+                            key={`state_ ${state.value}`}
+                          >
+                            {state.label}
+                          </option>
+                        );
+                      })}
+                    </Input>
                   </FormGroup>
                 </Col>
               </Row>
