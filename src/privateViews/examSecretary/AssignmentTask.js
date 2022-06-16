@@ -1971,7 +1971,7 @@ const AssignmentTask = () => {
                             <div className="col-auto col">
                               <span className="font-weight-light">
                                 {
-                                  editInvigilatorCalculate.numberOfChiefInvigilatorRequired
+                                  editInvigilatorCalculate.numberOfEnvironmentalSupervisorRequired
                                 }
                               </span>
                             </div>
