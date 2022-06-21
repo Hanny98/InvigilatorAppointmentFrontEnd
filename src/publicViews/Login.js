@@ -122,10 +122,22 @@ const UserLogin = () => {
           <CardHeader className="bg-transparent pb-5">
             {/* insert one icon */}
             <Row className="justify-content-center">
+              <Col lg="3">
+                <img
+                  style={{
+                    "border-radius": "50%",
+                  }}
+                  height={100}
+                  width={100}
+                  alt="..."
+                  src={require("../assets/img/icons/common/PEIA.jpg").default}
+                />
+                {/* <h1 className="text-white">Welcome!</h1> */}
+              </Col>
               <Col>
                 <b>
-                  Invigilator Appointment Based on Exam Center for Malaysia
-                  Public Exam
+                  Inivigilator Appointment Based On Exam Centre For Malaysia
+                  Public Exam Invigilator Assignment System
                 </b>
               </Col>
             </Row>
