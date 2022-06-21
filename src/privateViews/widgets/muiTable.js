@@ -70,6 +70,8 @@ const MuiTable = ({
     sort: true,
     responsive: "standard",
     rowsPerPageOptions: [3, 5, 10],
+    download: false,
+    print: false,
     count: totalCount,
     tableId: tableName,
     onTableChange: (action, tableState) => {

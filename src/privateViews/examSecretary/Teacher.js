@@ -268,11 +268,11 @@ const Teacher = () => {
   const handleSearch = async () => {
     dispatch(showLoading());
     changeTablePageFunction(0);
-    await searchTeacher(0, 100);
+    await searchTeacher(0, 5);
     dispatch(hideLoading());
   };
 
-  const searchTeacher = (skip, limit) => {
+  const searchTeacher = (skip, limit = 5) => {
     return fetchTeacher(searchValue, skip, limit);
   };
 
