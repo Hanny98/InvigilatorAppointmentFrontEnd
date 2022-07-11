@@ -131,6 +131,28 @@ const Users = () => {
       label: "Teacher",
     },
   ];
+  const filterUserGroupOptions = [
+    {
+      value: "",
+      label: "",
+    },
+    {
+      value: "Exam Secretary",
+      label: "Exam Secretary",
+    },
+    {
+      value: "School Principal",
+      label: "School Principal",
+    },
+    {
+      value: "Admin",
+      label: "Admin",
+    },
+    {
+      value: "Teacher",
+      label: "Teacher",
+    },
+  ];
 
   const distrcitOptions = [
     {
@@ -517,7 +539,7 @@ const Users = () => {
                             type="select"
                             onChange={handleChange}
                           >
-                            {userGroupOptions?.map((userGroup, index) => {
+                            {filterUserGroupOptions?.map((userGroup, index) => {
                               return (
                                 <option
                                   value={userGroup.value}
