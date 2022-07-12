@@ -595,7 +595,7 @@ const ApproveAssignmentTask = () => {
                                     <div className="col-auto col">
                                       <span className="font-weight-light">
                                         {
-                                          currentExamCenterData.numberOfChiefInvigilatorRequired
+                                          currentExamCenterData.numberOfEnvironmentalSupervisorRequired
                                         }
                                       </span>
                                     </div>
