@@ -183,12 +183,23 @@ const ExamCenterInformationPDF = ({
 
         <View style={styles.section}>
           <Text style={styles.text}>
-            Table 1: Number of Candidate of the Exam Center
+            Table 1: Number of Hall and Candidate of the Exam Center
           </Text>
         </View>
 
         <View style={tableStyle}>
           <View style={tableRowStyle} fixed>
+            <View style={firstTableColHeaderStyle}>
+              <Text style={tableCellHeaderStyle}>Hall Available</Text>
+            </View>
+
+            <View style={tableColHeaderStyle}>
+              <Text style={tableCellHeaderStyle}>Room Available</Text>
+            </View>
+
+            <View style={tableColHeaderStyle}>
+              <Text style={tableCellHeaderStyle}>Special Room Available</Text>
+            </View>
             <View style={firstTableColHeaderStyle}>
               <Text style={tableCellHeaderStyle}>Hall Candidate</Text>
             </View>
@@ -208,6 +219,23 @@ const ExamCenterInformationPDF = ({
           </View>
 
           <View style={tableRowStyle}>
+            <View style={firstTableColStyle}>
+              <Text style={tableCellStyle}>
+                {examCenterInformation.hallAvailable}
+              </Text>
+            </View>
+
+            <View style={tableColStyle}>
+              <Text style={tableCellStyle}>
+                {examCenterInformation.roomAvailable}
+              </Text>
+            </View>
+
+            <View style={tableColStyle}>
+              <Text style={tableCellStyle}>
+                {examCenterInformation.specialRoomAvailable}
+              </Text>
+            </View>
             <View style={firstTableColStyle}>
               <Text style={tableCellStyle}>
                 {examCenterInformation.hallCandidateNumber}
