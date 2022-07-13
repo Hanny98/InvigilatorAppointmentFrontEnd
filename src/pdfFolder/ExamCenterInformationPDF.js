@@ -183,7 +183,7 @@ const ExamCenterInformationPDF = ({
 
         <View style={styles.section}>
           <Text style={styles.text}>
-            Table 1: Hall & Room Available of the Exam Center
+            Table 1: Number of Candidate of the Exam Center
           </Text>
         </View>
 
